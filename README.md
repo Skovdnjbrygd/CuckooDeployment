@@ -22,7 +22,7 @@ The third file (Cuckoo-vm.sh), does all the heavy lifting:
   3. Sets up the networking (basically internet access), as described in the manual.
   
   4. 'sed' is used to replace the default values with the correct ones in processing, reporting, routing and virtualbox .conf files found inside the .cuckoo folder.
-  These "correct" values vary from host to host: hostname, interface name, what ip gets automatically assigns to guests etc.
+  These "correct" values vary from host to host: hostname, interface name, what ip gets automatically assigned to guests etc.
   You can't take the 'sed' parts of the code literally, but you can see which line in each file needs to be replaced with your hardware specific information.
   After all, this repo is called deployment... not auto-deployment.
   
