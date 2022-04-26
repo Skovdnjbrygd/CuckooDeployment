@@ -7,7 +7,7 @@
 # Tested on Cuckoo Sandbox v.2.0.7 running Ubuntu 18.04.6 LTS (Bionic Beaver)
 
 
-# Running 'sudo su cuckoo' during the script stops the execution of the  script and throws you back to the terminal command line.
+# Running 'sudo su cuckoo' during the script stops the execution of the script and throws you back to the terminal command line.
 # Therefore run the command at the very end of the script, so that it doesn’t matter if you get thrown out.
 
 
