@@ -1,4 +1,5 @@
 #author Skovdnjbrygd
+https://github.com/Skovdnjbrygd/CuckooDeployment/
 #credit Archan Choudhury 
 #https://github.com/archanchoudhury/Cuckoo-Script
 #credit S4kur4
@@ -19,7 +20,7 @@
 # Use 'vmcloak list deps' to see all the available software that can be installed on the analysis machine.
 
 
-# If the host machine is rebooted, internet access will be lost.
+# If the host machine is rebooted, internet access may be lost depending on what kind of network adapter is being provisioned to the VM.
 # Restore internet access by executing the commands found in the network routing section.
 
 
@@ -83,8 +84,9 @@ sed "19d" ~/.cuckoo/conf/routing.conf > ~/.cuckoo/conf/tmp.conf && sed -i "/ (Fo
 while read -r vm ip; do cuckoo machine --add $vm $ip; done < <(vmcloak list vms)
 
 
-# Removing mentions of cuckoo1 from virtualbox.conf machine and label sections, while Adding current analysis machine ip
-# These were generated during the 'while read -r vm ip;...' command above.
+# Remove mentions of cuckoo1 from the label and machine sections of virtualbox.conf 
+# These were generated during the 'while read -r vm ip;...' command above
+# Replaces the mentions with the current analysis machine IP
 sed "18d" ~/.cuckoo/conf/virtualbox.conf > ~/.cuckoo/conf/tmp.conf && sed -i "/ on the respective machine. (E.g. cuckoo1,cuckoo2,cuckoo3)/a\machines = 192.168.56.11" ~/.cuckoo/conf/tmp.conf && rm -rf ~/.cuckoo/conf/virtualbox.conf && mv ~/.cuckoo/conf/tmp.conf ~/.cuckoo/conf/virtualbox.conf
 sed -i '25c[192.168.56.11]' /home/cuckoo/.cuckoo/conf/virtualbox.conf
 sed "28d" ~/.cuckoo/conf/virtualbox.conf > ~/.cuckoo/conf/tmp.conf && sed -i "/ VirtualBox configuration./a\label = 192.168.56.11" ~/.cuckoo/conf/tmp.conf && rm -rf ~/.cuckoo/conf/virtualbox.conf && mv ~/.cuckoo/conf/tmp.conf ~/.cuckoo/conf/virtualbox.conf
@@ -99,12 +101,12 @@ sudo iptables -A FORWARD -m state --state RELATED,ESTABLISHED -j ACCEPT
 sudo iptables -A FORWARD -s 192.168.56.0/24 -j ACCEPT  
 
 
-echo -e '\e[1;33m *------------------------------------------------------------------------------------------------------*\e[0m'
-echo -e '\e[1;33m *                                        Process Completed Successfully!                               *\e[0m'
-echo -e '\e[1;33m *                                                                                                      *\e[0m'                       
-echo -e '\e[1;33m *                                 Follow the Final Steps to Interact with Cuckoo:                      *\e[0m'
-echo -e '\e[1;33m *                                                                                                      *\e[0m' 
-echo -e '\e[1;33m *     open new terminal 1: cuckoo rooter --sudo --group cuckoo                                         *\e[0m'
-echo -e '\e[1;33m *     open new terminal 2: cuckoo                                                                      *\e[0m'
-echo -e '\e[1;33m *     open new terminal 3: cuckoo web --host 127.0.0.1 --port 8080 (public interface ip also works)    *\e[0m'
-echo -e '\e[1;33m *------------------------------------------------------------------------------------------------------*\e[0m'
+echo -e '\e[1;33m *-------------------------------------------------------------------------------------------------------*\e[0m'
+echo -e '\e[1;33m *                                        Process Completed Successfully!                                *\e[0m'
+echo -e '\e[1;33m *                                                                                                       *\e[0m'                       
+echo -e '\e[1;33m *                                 Follow the Final Steps to Interact with Cuckoo:                       *\e[0m'
+echo -e '\e[1;33m *                                                                                                       *\e[0m' 
+echo -e '\e[1;33m *     open new terminal 1: cuckoo rooter --sudo --group cuckoo                                          *\e[0m'
+echo -e '\e[1;33m *     open new terminal 2: cuckoo                                                                       *\e[0m'
+echo -e '\e[1;33m *     open new terminal 3: cuckoo web --host 127.0.0.1 --port 8080 (vboxnet0 and internet ip also work) *\e[0m'
+echo -e '\e[1;33m *-------------------------------------------------------------------------------------------------------*\e[0m'
