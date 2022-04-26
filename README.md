@@ -13,11 +13,15 @@ In addition, the second file  (Cuckoo-Pre2of2.sh) installs the required dependen
 This is not needed, but why not make it fancy (and more secure). Everything is also echoed into .bashrc to make the use of the terminal session pleasant.
 
 The third file (Cuckoo-vm.sh), does all the heavy lifting:
-  It creates a fully functional analysis machine (nested vm via VMcloak).
+
+  1. It creates a fully functional analysis machine (nested vm via VMcloak).
   Refer to the script to see the correct syntax on how install packages on the machine created with VMcloak. Be aware that some packages like Office require a cd-key.
-  Initializes Cuckoo and its community files.
-  Sets up the networking (basically internet access), as described in the manual.
-  'sed' is used to replace the default values with the correct ones in processing, reporting, routing and virtualbox .conf files found inside the .cuckoo folder.
+  
+  2. Initializes Cuckoo and its community files.
+  
+  3. Sets up the networking (basically internet access), as described in the manual.
+  
+  4. 'sed' is used to replace the default values with the correct ones in processing, reporting, routing and virtualbox .conf files found inside the .cuckoo folder.
   These "correct" values vary from host to host: hostname, interface name, what ip gets automatically assigns to guests etc.
   You can't take the 'sed' parts of the code literally, but you can see which line in each file needs to be replaced with your hardware specific information.
   After all, this repo is called deployment... not auto-deployment.
