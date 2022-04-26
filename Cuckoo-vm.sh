@@ -69,7 +69,6 @@ vmcloak list vms
 # Initialize Cuckoo and its configuration
 cuckoo init
 
-
 # Fetch supplies from the Cuckoo Community
 cuckoo community
 
@@ -77,7 +76,11 @@ cuckoo community
 # Open MongoDB and VirusTotal
 sed "45d" ~/.cuckoo/conf/reporting.conf > ~/.cuckoo/conf/tmp.conf && sed -i "/mongodb]/a\enabled = yes" ~/.cuckoo/conf/tmp.conf && rm -rf ~/.cuckoo/conf/reporting.conf && mv ~/.cuckoo/conf/tmp.conf ~/.cuckoo/conf/reporting.conf
 sed "148d" ~/.cuckoo/conf/processing.conf > ~/.cuckoo/conf/tmp.conf && sed -i "/virustotal]/a\enabled = yes" ~/.cuckoo/conf/tmp.conf && rm -rf ~/.cuckoo/conf/processing.conf && mv ~/.cuckoo/conf/tmp.conf ~/.cuckoo/conf/processing.conf
-sed "160d" ~/.cuckoo/conf/processing.conf > ~/.cuckoo/conf/tmp.conf && sed -i "/ and while being shared with all our users, it shouldn't affect your use./a\key = 65a04baba918898271ef9ed85a0eaeb89b91b00835bf3d762757c3f8f709b3c3" ~/.cuckoo/conf/tmp.conf && rm -rf ~/.cuckoo/conf/processing.conf && mv ~/.cuckoo/conf/tmp.conf ~/.cuckoo/conf/processing.conf
+
+# If you have a VirusTotal account you can use the key tied to your account, instead of the default one VirusTotal has given to Cuckoo
+# sed "160d" ~/.cuckoo/conf/processing.conf > ~/.cuckoo/conf/tmp.conf && sed -i "/ and while being shared with all our users, it shouldn't affect your use./a\key = insert_private_VirusTotalKey_here" ~/.cuckoo/conf/tmp.conf && rm -rf ~/.cuckoo/conf/processing.conf && mv ~/.cuckoo/conf/tmp.conf ~/.cuckoo/conf/processing.conf
+
+# Assign the interface that your hostmachine uses for internet access, in this case ens33
 sed "19d" ~/.cuckoo/conf/routing.conf > ~/.cuckoo/conf/tmp.conf && sed -i "/ (For example, to use eth0 as dirty line: \"internet = eth0\")./a\internet = ens33" ~/.cuckoo/conf/tmp.conf && rm -rf ~/.cuckoo/conf/routing.conf && mv ~/.cuckoo/conf/tmp.conf ~/.cuckoo/conf/routing.conf
 
 
