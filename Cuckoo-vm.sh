@@ -5,21 +5,12 @@
 #credit S4kur4
 #https://github.com/S4kur4/AutoDeployCuckoo
 
+
+
 # Deployment tested April 2022
 
 # Tested on Cuckoo Sandbox v.2.0.7 running Ubuntu 18.04.6 LTS (Bionic Beaver)
 # Agent.py v0.10
-
-
-# Script details
-# Using 'sed' to insert/replace text in the .conf files works for now (Cuckoo Sandbox v.2.0.7).
-# Once Cuckoo gets a version update, the 'sed' part of the script has to be checked to make sure 
-# the line numbers are still correct.
-
-# Change the 'vmcloak init' parameters to suit your own analysis machine needs.
-# Change the 'vmcloak install' parameters to install the software packages you need in your analysis machine.
-# Note that some software packages like Office will need additional parameters - like a cdkey.
-# Use 'vmcloak list deps' to see all the available software that can be installed on the analysis machine.
 
 # Connectivity issues on reboot
 # If the host machine is rebooted, internet access may be lost depending on what kind of network adapter is being provisioned to the VM.
@@ -30,6 +21,15 @@
 # vboxmanage hostonlyif create && vboxmanage hostonlyif ipconfig vboxnet0 --ip 192.168.56.1 --netmask 255.255.255.0
 
 #--------------------------------------------------------------------------------------------------------------------------------------------#
+
+# Script details
+# Using 'sed' to insert/replace text in the .conf files works for now (Cuckoo Sandbox v.2.0.7).
+# Once Cuckoo gets a version update, the 'sed' part of the script has to be checked to make sure 
+# the line numbers are still correct.
+# Change the 'vmcloak init' parameters to suit your own analysis machine needs.
+# Change the 'vmcloak install' parameters to install the software packages you need in your analysis machine.
+# Note that some software packages like Office will need additional parameters - like a cdkey.
+# Use 'vmcloak list deps' to see all the available software that can be installed on the analysis machine.
 
 
 # Setup virtual machine
