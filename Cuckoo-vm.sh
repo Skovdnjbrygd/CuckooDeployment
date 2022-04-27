@@ -23,7 +23,7 @@
 #--------------------------------------------------------------------------------------------------------------------------------------------#
 
 # Script details
-# Using 'sed' to insert/replace text in the .conf files works for now (Cuckoo Sandbox v.2.0.7).
+# Using 'sed' to insert/replace text in the .conf files.
 # Once Cuckoo gets a version update, the 'sed' part of the script has to be checked to make sure 
 # the line numbers are still correct.
 # Change the 'vmcloak init' parameters to suit your own analysis machine needs.
