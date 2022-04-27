@@ -1,5 +1,5 @@
 #author Skovdnjbrygd
-#https://github.com/Skovdnjbrygd/CuckooDeployment/
+#https://github.com/Skovdnjbrygd/CuckooUsingVMCloak
 #credit Archan Choudhury 
 #https://github.com/archanchoudhury/Cuckoo-Script
 #credit S4kur4
@@ -10,32 +10,19 @@
 # Tested on Cuckoo Sandbox v.2.0.7 running Ubuntu 18.04.6 LTS (Bionic Beaver)
 # Agent.py v0.10
 
-#Deployment enviorment details
 
-# I chose to use VMware Workstation as the top level of virtualization because in testing I found that the vmcloak phase of
-# the script took about 20 minutes compared to the 4-7 hours it took when I used VirtualBox.
-
-# The machine in which Cuckoo will be installed is a virtualmachine with 2 cpu's and 4gb ram.
-# It is being hosted by VMware® Workstation 16 Pro build-19376536 on Windows 10 Pro (latest build April 2022).
-# The virtualized analysis machine running inside the virtualized Cuckoo machine is running VirtualBox v5.2.42_Ubuntu-r137960. 
-# The Cuckoo machine has one analysis machine running through nested virtualization with 2 cpu's and 2gb ram.
-
-
-#Details about the script
+# Script details
 # Using 'sed' to insert/replace text in the .conf files works for now (Cuckoo Sandbox v.2.0.7).
 # Once Cuckoo gets a version update, the 'sed' part of the script has to be checked to make sure 
 # the line numbers are still correct.
-
 
 # Change the 'vmcloak init' parameters to suit your own analysis machine needs.
 # Change the 'vmcloak install' parameters to install the software packages you need in your analysis machine.
 # Note that some software packages like Office will need additional parameters - like a cdkey.
 # Use 'vmcloak list deps' to see all the available software that can be installed on the analysis machine.
 
-
 # If the host machine is rebooted, internet access may be lost depending on what kind of network adapter is being provisioned to the VM.
 # Restore internet access by executing the commands found in the network routing section.
-
 
 # If the host machine is rebooted, the virtual interface used by Cuckoo to communicate with the analysis machine will be down.
 # Bring it up again with:
