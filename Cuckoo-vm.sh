@@ -31,6 +31,7 @@
 
 #--------------------------------------------------------------------------------------------------------------------------------------------#
 
+
 # Setup virtual machine
 # This part is commented because I have a local copy of the .iso saved in the same directory where the script is executed.
 # Uncomment the next 4 lines if you need to download the .iso used in the analysis machine.
