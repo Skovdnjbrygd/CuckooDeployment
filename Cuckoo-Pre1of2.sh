@@ -1,5 +1,5 @@
 #author Skovdnjbrygd
-#https://github.com/Skovdnjbrygd/CuckooUsingVMCloak/
+#https://github.com/Skovdnjbrygd/CuckooUsingVMCloak
 #credit Archan Choudhury 
 #https://github.com/archanchoudhury/Cuckoo-Script
 
