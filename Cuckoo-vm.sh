@@ -114,5 +114,5 @@ echo -e '\e[1;33m *                                 Follow the Final Steps to In
 echo -e '\e[1;33m *                                                                                                       *\e[0m' 
 echo -e '\e[1;33m *     open new terminal 1: cuckoo rooter --sudo --group cuckoo                                          *\e[0m'
 echo -e '\e[1;33m *     open new terminal 2: cuckoo                                                                       *\e[0m'
-echo -e '\e[1;33m *     open new terminal 3: cuckoo web --host 127.0.0.1 --port 8080 (vboxnet0 and internet ip also work) *\e[0m'
+echo -e '\e[1;33m *     open new terminal 3: cuckoo web --host 127.0.0.1 --port 8080 (vboxnet0 or internet IPs also work) *\e[0m'
 echo -e '\e[1;33m *-------------------------------------------------------------------------------------------------------*\e[0m'
