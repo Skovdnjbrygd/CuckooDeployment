@@ -3,6 +3,8 @@
 #credit Archan Choudhury 
 #https://github.com/archanchoudhury/Cuckoo-Script
 
+
+
 # Tested on Cuckoo Sandbox v.2.0.7 running Ubuntu 18.04.6 LTS (Bionic Beaver)
 # Agent.py v0.10
 
