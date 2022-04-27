@@ -1,13 +1,23 @@
 #author Skovdnjbrygd
-#https://github.com/Skovdnjbrygd/CuckooDeployment/
+#https://github.com/Skovdnjbrygd/CuckooUsingVMCloak/
 #credit Archan Choudhury 
 #https://github.com/archanchoudhury/Cuckoo-Script
 
-# Deployment tested April 2022
-
 # Tested on Cuckoo Sandbox v.2.0.7 running Ubuntu 18.04.6 LTS (Bionic Beaver)
+# Agent.py v0.10
+
+# Deployment enviorment details
+
+# I chose to use VMware Workstation as the top level of virtualization because in testing I found that the vmcloak phase of
+# the script took about 20 minutes compared to the 4-7 hours it took when I used VirtualBox.
+
+# The machine in which Cuckoo will be installed is a virtualmachine with 2 cpu's and 4gb ram.
+# It is being hosted by VMware® Workstation 16 Pro build-19376536 on Windows 10 Pro (latest build April 2022).
+# The virtualized analysis machine running inside the virtualized Cuckoo machine is running VirtualBox v5.2.42_Ubuntu-r137960. 
+# The Cuckoo machine has one analysis machine running through nested virtualization with 2 cpu's and 2gb ram.
 
 
+# Script details
 # Running 'sudo su cuckoo' during the script stops the execution of the script and throws you back to the terminal command line.
 # Therefore run the command at the very end of the script, so that it doesn’t matter if you get thrown out.
 
