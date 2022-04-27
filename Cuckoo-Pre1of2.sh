@@ -6,7 +6,6 @@
 # Tested on Cuckoo Sandbox v.2.0.7 running Ubuntu 18.04.6 LTS (Bionic Beaver)
 # Agent.py v0.10
 
-
 # Deployment enviorment details
 # I chose to use VMware Workstation as the top level of virtualization because in testing I found that the vmcloak phase of
 # the script took about 20 minutes compared to the 4-7 hours it took when I used VirtualBox.
@@ -17,12 +16,11 @@
 # The virtualized analysis machine running inside the virtualized Cuckoo machine is running VirtualBox v5.2.42_Ubuntu-r137960. 
 # The Cuckoo machine has one analysis machine running through nested virtualization with 2 cpu's and 2gb ram.
 
+#--------------------------------------------------------------------------------------------------------------------------------------------#
 
 # Script details
 # Running 'sudo su cuckoo' during the script stops the execution of the script and throws you back to the terminal command line.
 # Therefore run the command at the very end of the script, so that it doesn’t matter if you get thrown out.
-
-#--------------------------------------------------------------------------------------------------------------------------------------------#
 
 
 # System update
