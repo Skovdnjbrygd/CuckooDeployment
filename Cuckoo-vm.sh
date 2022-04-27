@@ -21,6 +21,7 @@
 # Note that some software packages like Office will need additional parameters - like a cdkey.
 # Use 'vmcloak list deps' to see all the available software that can be installed on the analysis machine.
 
+# Connectivity issues on reboot
 # If the host machine is rebooted, internet access may be lost depending on what kind of network adapter is being provisioned to the VM.
 # Restore internet access by executing the commands found in the network routing section.
 
@@ -28,6 +29,7 @@
 # Bring it up again with:
 # vboxmanage hostonlyif create && vboxmanage hostonlyif ipconfig vboxnet0 --ip 192.168.56.1 --netmask 255.255.255.0
 
+#--------------------------------------------------------------------------------------------------------------------------------------------#
 
 # Setup virtual machine
 # This part is commented because I have a local copy of the .iso saved in the same directory where the script is executed.
