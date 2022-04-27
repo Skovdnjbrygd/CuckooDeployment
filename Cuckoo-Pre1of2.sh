@@ -21,6 +21,8 @@
 # Running 'sudo su cuckoo' during the script stops the execution of the script and throws you back to the terminal command line.
 # Therefore run the command at the very end of the script, so that it doesn’t matter if you get thrown out.
 
+#--------------------------------------------------------------------------------------------------------------------------------------------#
+
 
 # System update
 echo -e '\e[1;33m *------------------------------------------------------------------------------------------------------*\e[0m'
