@@ -6,6 +6,7 @@
 # Tested on Cuckoo Sandbox v.2.0.7 running Ubuntu 18.04.6 LTS (Bionic Beaver)
 # Agent.py v0.10
 
+
 # Deployment enviorment details
 # I chose to use VMware Workstation as the top level of virtualization because in testing I found that the vmcloak phase of
 # the script took about 20 minutes compared to the 4-7 hours it took when I used VirtualBox.
