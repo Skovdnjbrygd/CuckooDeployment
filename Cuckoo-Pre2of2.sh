@@ -1,13 +1,15 @@
 #author Skovdnjbrygd
-#https://github.com/Skovdnjbrygd/CuckooDeployment
+#https://github.com/Skovdnjbrygd/CuckooUsingVMCloak
 #credit Archan Choudhury 
 #https://github.com/archanchoudhury/Cuckoo-Script
 
 # Deployment tested April 2022
 
 # Tested on Cuckoo Sandbox v.2.0.7 running Ubuntu 18.04.6 LTS (Bionic Beaver)
+# Agent.py v0.10
 
 
+#Script details
 # Remember to input the following commands after the script execution is complete:
 # source ~/.bashrc   
 # mkvirtualenv -p python2.7 cuckoo-test
