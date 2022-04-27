@@ -9,7 +9,6 @@
 # Deployment enviorment details
 # I chose to use VMware Workstation as the top level of virtualization because in testing I found that the vmcloak phase of
 # the script took about 20 minutes compared to the 4-7 hours it took when I used VirtualBox.
-
 # The machine in which Cuckoo will be installed is a virtualmachine with 2 cpu's and 4gb ram.
 # It is being hosted by VMware® Workstation 16 Pro build-19376536 on Windows 10 Pro (latest build April 2022).
 # The virtualized analysis machine running inside the virtualized Cuckoo machine is running VirtualBox v5.2.42_Ubuntu-r137960. 
