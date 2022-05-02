@@ -64,7 +64,7 @@ vmcloak-vboxnet0
 vmcloak init --verbose --win7x64 win7x64base --cpus 2 --ramsize 2048
 vmcloak clone win7x64base win7x64cuckoo
 vmcloak list deps
-vmcloak install win7x64cuckoo adobepdf vcredist java flash ie11 chrome winrar office2007.serial=TT3M8-H3469-V89G6-8FWK7-D3Q9Q dotnet
+vmcloak install win7x64cuckoo adobepdf vcredist java flash ie11 chrome winrar office2007.serial=TT3M8-H3469-V89G6-8FWK7-D3Q9Q zer0m0n dotnet
 vmcloak snapshot --count 1 win7x64cuckoo 192.168.56.1
 vmcloak list vms
 
